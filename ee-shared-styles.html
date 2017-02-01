@@ -11,6 +11,10 @@
       .hidden {
         display: none;
       }
+
+      .elevated {
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+      }
       /* DISPLAY END */
 
       /* SPACE */
@@ -262,12 +266,34 @@
           background: var(--default-action-color);
           @apply(--layout-vertical);
           @apply(--layout-center-center);
+          @apply(--paper-button-spinner-button-2);
         };
 
         --paper-button-spinner-button-working: {
           background: #eaeaea !important;
           color: #a8a8a8 !important;
         };
+      }
+
+      .next-btn-bottom-right {
+        position: fixed;
+        bottom: 64px;
+        right: 24px;
+        width: 120px;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+
+        --paper-button-spinner-button-2: {
+          width: 120px;
+          border-top-right-radius: 30px;
+          border-bottom-right-radius: 30px;
+        }
+      }
+
+      .next-btn-bottom-right-cancel {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
       }
 
       paper-button.full-width, paper-button-spinner.full-width, ee-status-button.full-width {
